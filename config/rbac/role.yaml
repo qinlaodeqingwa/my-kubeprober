@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - kubeprober.erda.cloud
+  resources:
+  - probes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - kubeprober.erda.cloud
+  resources:
+  - probes/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - kubeprober.erda.cloud
+  resources:
+  - probes/status
+  verbs:
+  - get
+  - patch
+  - update
