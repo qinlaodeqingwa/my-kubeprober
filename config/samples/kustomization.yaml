@@ -1,4 +1,0 @@
-## Append samples of your project ##
-resources:
-- kubeprober_v1_probe.yaml
-# +kubebuilder:scaffold:manifestskustomizesamples
